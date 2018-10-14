@@ -1,0 +1,23 @@
+{
+	"name": "mediawiki/columns",
+	"type": "mediawiki-extension",
+	"description": "Very simple parser function for creating div columns",
+	"keywords": [
+		"MediaWiki"
+	],
+	"homepage": "https://github.com/SimilisTools/mediawiki-columns",
+	"license": "GPL-3.0+",
+	"authors": [
+		{
+			"name": "Toni Hermoso Pulido",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"composer/installers": "1.*,>=1.0.1"
+	},
+	"autoload": {
+		"files": ["Columns.php"]
+	}
+}
