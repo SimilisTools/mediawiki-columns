@@ -61,7 +61,7 @@ function wfColumnsRender( $text, array $args, Parser $parser, PPFrame $frame ) {
 		$output = str_replace("</li>", "", $output);
 		$output = str_replace("<p>", "", $output);
 		$output = str_replace("</p>", "", $output);
-		$listli = split("<li>", $output);
+		$listli = explode("<li>", $output);
 		$final = "";
 		$iter = 0;
 	
@@ -88,7 +88,7 @@ function wfColumnsRender( $text, array $args, Parser $parser, PPFrame $frame ) {
 
 	} else {
 	
-		$listli = split("\*", $output);
+		$listli = explode("\*", $output);
 		$final = "";
 		$iter = 0;
 
