@@ -12,7 +12,7 @@ call_user_func( function() {
 			'path' => __FILE__,
 			'name' => "Columns",
 			'description' => "Very simple parser function for creating div columns",
-			'version' => 0.2,
+			'version' => 0.2.0,
 			'author' => "@toniher",
 			'url' => "https://mediawiki.org/wiki/User:Toniher",
 	);
@@ -78,7 +78,7 @@ function wfColumnsRender( $text, array $args, Parser $parser, PPFrame $frame ) {
 				$iter=0;
 			}
 			else {
-				if ($i == count($listli2)-1) {
+				if ($i == count($listli)-1) {
 						$final.="</ul></div>";
 				}
 			}
