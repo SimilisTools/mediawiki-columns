@@ -12,7 +12,7 @@ call_user_func( function() {
 			'path' => __FILE__,
 			'name' => "Columns",
 			'description' => "Very simple parser function for creating div columns",
-			'version' => 0.2.0,
+			'version' => "0.2.0",
 			'author' => "@toniher",
 			'url' => "https://mediawiki.org/wiki/User:Toniher",
 	);
