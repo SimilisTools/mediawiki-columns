@@ -1,0 +1,15 @@
+{
+    "name": "Columns",
+    "version": "0.3.0",
+    "author": ["@toniher"],
+    "url": "https://mediawiki.org/wiki/User:Toniher",
+    "description": "Very simple parser function for creating div columns",
+    "type": "parserhook",
+    "AutoloadClasses": {
+        "MediaWiki\\Extension\\Columns\\Columns": "includes/Columns.php"
+    },
+    "Hooks": {
+        "ParserFirstCallInit": "MediaWiki\\Extension\\Columns\\Columns::onParserFirstCallInit"
+    },
+    "manifest_version": 2
+}
