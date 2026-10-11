@@ -15,7 +15,6 @@ class Columns
 
     public static function render($text, array $args, Parser $parser, PPFrame $frame)
     {
-        $output = $parser->recursiveTagParse($text, $frame);
         $columns = 10;
         $format = "wiki";
         $classmain = "columns";
@@ -33,6 +32,11 @@ class Columns
         if (isset($args["class"])) {
             $class = $args["class"];
         }
+
+        // html mode splits on <li>, so it needs the block-level (list) pass that recursiveTagParse skips in MW >= 1.4x
+        $output = $format == "html"
+            ? $parser->recursiveTagParseFully($text, $frame)
+            : $parser->recursiveTagParse($text, $frame);
 
         if ($format == "html") {
             $output = str_replace([ "<ul>", "</ul>", "</li>", "<p>", "</p>" ], "", $output);
